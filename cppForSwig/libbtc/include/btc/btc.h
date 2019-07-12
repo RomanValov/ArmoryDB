@@ -27,6 +27,18 @@
 #ifndef __LIBBTC_BTC_H__
 #define __LIBBTC_BTC_H__
 
+#ifdef __linux__
+#define _BSD_SOURCE
+#endif
+
+#ifdef HAVE_CONFIG_H
+#include "libbtc-config.h"
+#endif
+
+#ifdef HAVE_SYS_TYPES_H
+#include <sys/types.h>
+#endif
+
 #include <limits.h>
 #include <stdint.h>
 #include <stdio.h>
